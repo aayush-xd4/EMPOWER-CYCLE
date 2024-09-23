@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Awareness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #00796b;
+        }
+        .section p {
+            font-size: 16px;
+            color: #555;
+        }
+        .remedies, .medicines {
+            background-color: #e0f2f1;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .call-to-action {
+            background-color: #ffebee;
+            border-radius: 8px;
+            padding: 15px;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00796b;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>PCOS Awareness</h1>
+        <div class="section">
+            <h2>Home Remedies</h2>
+            <div class="remedies">
+                <p>1. Maintain a balanced diet rich in fruits, vegetables, and whole grains.</p>
+                <p>2. Regular exercise can help manage weight and improve insulin sensitivity.</p>
+                <p>3. Herbal teas like spearmint or green tea may help with symptoms.</p>
+                <p>4. Ensure adequate sleep and manage stress through relaxation techniques.</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Normal Medicines</h2>
+            <div class="medicines">
+                <p>1. **Metformin**: Often prescribed to improve insulin sensitivity.</p>
+                <p>2. **Birth Control Pills**: Used to regulate menstrual cycles and reduce acne.</p>
+                <p>3. **Anti-Androgens**: Such as spironolactone, to reduce excessive hair growth.</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Consult a Doctor</h2>
+            <p>If you are experiencing severe symptoms such as extreme weight gain, severe acne, or significant fertility issues, please consult a healthcare professional for a personalized treatment plan.</p>
+            <button onclick="showMessage()">Get Recommendations</button>
+            <p id="doctorMessage" class="call-to-action" style="display:none;"></p>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const seriousSymptoms = confirm("Are you experiencing severe symptoms (e.g., extreme weight gain, severe acne, significant fertility issues)?");
+            const doctorMessage = document.getElementById('doctorMessage');
+
+            if (seriousSymptoms) {
+                doctorMessage.innerText = "It's important to consult a healthcare professional for a thorough evaluation and personalized treatment plan.";
+                doctorMessage.style.display = 'block';
+            } else {
+                doctorMessage.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>

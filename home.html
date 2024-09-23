@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CycleSense - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <div class="logo">EMPOWER CYCLE</div>
+        <nav>
+            <ul>
+                <li><a href="#cycle-tracker">Cycle Tracker</a></li>
+                <li><a href="#ai-assistant">AI Assistant</a></li>
+                <li><a href="#smart-product-selection">Product Selection</a></li>
+                <li><a href="#symptom-management">Symptom Management</a></li>
+                <li><a href="#ai-chatbot">AI Chatbot</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+        <button id="logoutBtn">Logout</button>
+    </header>
+    <main>
+        <section id="hero" class="page-like">
+            <img src="https://t4.ftcdn.net/jpg/05/01/72/69/240_F_501726947_tseRcvRFwcaQRnCLM6IEZn1yNWRjp4Tk.jpg" alt="Menstrual Health Illustration" class="hero-image">
+            <div class="hero-text">
+                <h1>Welcome to Your Personal Menstrual Health Assistant</h1>
+                <p>Track, understand, and nurture your cycle with CycleSense</p>
+            </div>
+        </section>
+        
+        <section id="cycle-tracker" class="two-column">
+            <div class="text-content">
+                <h2>Cycle Tracker</h2>
+                <p>Stay on top of your menstrual cycle with our intuitive tracker. Log your periods, predict future cycles, and gain insights into your body's natural rhythm.</p>
+                <ul>
+                    <li>Accurate cycle predictions</li>
+                    <li>Customizable tracking options</li>
+                    <li>Insightful cycle analytics</li>
+                </ul>
+                <button class="section-btn" data-page="cycle-tracker.html">Go to Cycle Tracker</button>
+            </div>
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-on-menstruation-cycle-3975762-3290988.png" alt="Cycle Tracker Illustration" class="section-image">
+        </section>
+        
+        <section id="ai-assistant" class="two-column">
+            <div class="text-content">
+                <h2>AI-Powered Voice Assistant</h2>
+                <p>Meet your personal menstrual health companion. Our AI-powered voice assistant is here to answer your questions, provide insights, and offer support throughout your cycle.</p>
+                <ul>
+                    <li>24/7 availability</li>
+                    <li>Personalized responses</li>
+                    <li>Continuous learning for better support</li>
+                </ul>
+                <button class="section-btn" data-page="ai-assistant.html">Try AI Assistant</button>
+            </div>
+            <img src="https://png.pngtree.com/png-vector/20220715/ourmid/pngtree-chatbot-voice-controlled-virtual-assistant-abstract-concept-vector-illustration-png-image_5925985.png" alt="AI Voice Assistant" class="section-image">
+        </section>
+        
+        <section id="smart-product-selection" class="two-column">
+            <div class="text-content">
+                <h2>Smart Menstrual Product Selection</h2>
+                <p>Discover the perfect products for your unique needs. Our smart recommendation system considers your flow, comfort preferences, and lifestyle to suggest the best menstrual products for you.</p>
+                <ul>
+                    <li>Tailored product suggestions</li>
+                    <li>Eco-friendly options</li>
+                    <li>User reviews and ratings</li>
+                </ul>
+                <button class="section-btn" data-page="product-selection.html">Find Your Products</button>
+            </div>
+            <img src="https://img.freepik.com/premium-vector/menstruation-theme-period-various-feminine-hygiene-products-menstrual-protection-feminine-hygiene_533406-711.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1726185600&semt=ais_hybrid" alt="Menstrual Products" class="section-image">
+        </section>
+        
+        <section id="symptom-management" class="two-column">
+            <div class="text-content">
+                <h2>Personalized Symptom Management</h2>
+                <p>Experience relief with our tailored symptom management suggestions. Based on your unique patterns and preferences, we provide personalized tips and remedies to help you feel your best throughout your cycle.</p>
+                <ul>
+                    <li>Custom symptom tracking</li>
+                    <li>AI-powered remedy suggestions</li>
+                    <li>Progress monitoring</li>
+                </ul>
+                <button class="section-btn" data-page="symptom-management.html">Manage Symptoms</button>
+            </div>
+            <div id="symptomContainer">
+                <div class="symptom" draggable="true">Cramps</div>
+                <div class="symptom" draggable="true">Headache</div>
+                <div class="symptom" draggable="true">Mood Swings</div>
+                <div class="symptom" draggable="true">Fatigue</div>
+            </div>
+            <div id="symptomLog">
+                <p>Drag symptoms here to log them</p>
+            </div>
+        </section>
+        
+        <section id="ai-chatbot" class="two-column">
+            <div class="text-content">
+                <h2>AI Chatbot for Instant Advice</h2>
+                <p>Get immediate answers to your menstrual health questions. Our AI chatbot is available 24/7 to provide quick, accurate information and support when you need it most.</p>
+                <ul>
+                    <li>Instant responses</li>
+                    <li>Reliable health information</li>
+                    <li>Private and secure interactions</li>
+                </ul>
+                <button class="section-btn" data-page="ai-chatbot.html">Chat Now</button>
+            </div>
+            <img src="https://static.vecteezy.com/system/resources/previews/002/511/876/original/menstruation-theme-period-various-feminine-hygiene-products-a-young-girl-is-happy-to-have-a-various-feminine-hygiene-products-panties-pads-cups-menstrual-protection-feminine-hygiene-vector.jpg" alt="AI Chatbot" class="section-image">
+        </section>
+        
+        <section id="resources">
+            <h2>Resources</h2>
+            <div class="resource-cards">
+                <div class="resource-card">
+                    <img src="/api/placeholder/300/200" alt="Understanding PMS">
+                    <h3>Understanding PMS</h3>
+                    <p>Learn about the causes and management of Premenstrual Syndrome.</p>
+                    <button class="resource-btn" data-page="pms-guide.html">Read More</button>
+                </div>
+                <div class="resource-card">
+                    <img src="/api/placeholder/300/200" alt="PCOS Awareness">
+                    <h3>PCOS Awareness</h3>
+                    <p>Information about Polycystic Ovary Syndrome and its effects on menstrual health.</p>
+                    <button class="resource-btn" data-page="pcos-guide.html">Read More</button>
+                </div>
+                <div class="resource-card">
+                    <img src="/api/placeholder/300/200" alt="Menstrual Hygiene">
+                    <h3>Menstrual Hygiene</h3>
+                    <p>Best practices for maintaining proper menstrual hygiene and health.</p>
+                    <button class="resource-btn" data-page="hygiene-guide.html">Read More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@cyclesense.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">TW</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#cycle-tracker">Cycle Tracker</a></li>
+                    <li><a href="#ai-assistant">AI Assistant</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 CycleSense. All rights reserved.</p>
+    </footer>
+    <script src="home.js"></script>
+</body>
+</html>

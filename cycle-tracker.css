@@ -1,0 +1,64 @@
+/* cycle-tracker.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  form, ul {
+    margin-bottom: 20px;
+  }
+  
+  label, select, input {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #cycleList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #cycleList li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  #predictionResult {
+    font-weight: bold;
+    color: green;
+  }
+  
+  #symptomAnalysis {
+    font-style: italic;
+    color: #666;
+  }
+  

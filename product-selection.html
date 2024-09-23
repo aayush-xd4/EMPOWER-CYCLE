@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Menstrual Product Recommender</title>
+    <link rel="stylesheet" href="app.js">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #ff69b4;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+.user-input {
+    margin: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+select, button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 300px;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4093;
+}
+
+#recommendation {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.reviews {
+    margin: 30px;
+}
+
+.review-item {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.review-item h3 {
+    margin: 0;
+    color: #ff69b4;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Smart Menstrual Product Selector</h1>
+        <p>Find the best products tailored just for you! 💖</p>
+    </header>
+
+    <section class="user-input">
+        <h2>Tell us about yourself</h2>
+
+        <form id="productForm">
+            <label for="flow">Select your menstrual flow:</label>
+            <select id="flow">
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="heavy">Heavy</option>
+            </select>
+
+            <label for="comfort">Comfort Level:</label>
+            <select id="comfort">
+                <option value="soft">Soft & Gentle</option>
+                <option value="eco">Eco-friendly</option>
+                <option value="highAbsorbency">High Absorbency</option>
+            </select>
+
+            <label for="accessibility">Do you have any accessibility needs?</label>
+            <select id="accessibility">
+                <option value="none">None</option>
+                <option value="dexterity">Limited Dexterity</option>
+                <option value="visual">Visual Impairment</option>
+            </select>
+
+            <button type="button" onclick="getRecommendation()">Get Recommendation 🚀</button>
+        </form>
+
+        <div id="recommendation"></div>
+    </section>
+
+    <section class="reviews">
+        <h2>Product Reviews</h2>
+        <div id="reviews-container"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

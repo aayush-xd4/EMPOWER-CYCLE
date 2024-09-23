@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Period Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .tracker-container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+        label, input, select {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        input, select {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff8f8f;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            background-color: #fff7f7;
+            padding: 10px;
+            border: 1px solid #ff6b6b;
+            border-radius: 5px;
+        }
+        .result.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tracker-container">
+        <h1>Period Tracker</h1>
+
+        <label for="lastPeriod">Last Period Date:</label>
+        <input type="date" id="lastPeriod" required>
+
+        <label for="cycleLength">Average Cycle Length (in days):</label>
+        <input type="number" id="cycleLength" value="28" min="20" max="40" required>
+
+        <label for="symptoms">Symptoms (select any):</label>
+        <select id="symptoms" multiple>
+            <option value="cramps">Cramps</option>
+            <option value="fatigue">Fatigue</option>
+            <option value="mood swings">Mood Swings</option>
+            <option value="headaches">Headaches</option>
+        </select>
+
+        <button onclick="calculateNextPeriod()">Calculate Next Period Date</button>
+
+        <div class="result hidden" id="result"></div>
+    </div>
+
+    <script>
+        function calculateNextPeriod() {
+            const lastPeriodDate = new Date(document.getElementById('lastPeriod').value);
+            const cycleLength = parseInt(document.getElementById('cycleLength').value);
+            const symptoms = Array.from(document.getElementById('symptoms').selectedOptions).map(option => option.value);
+
+            if (!lastPeriodDate) {
+                alert("Please enter a valid last period date.");
+                return;
+            }
+
+            // Adjusting the next period date based on the symptoms (for example)
+            let daysOffset = 0;
+            if (symptoms.includes('cramps') || symptoms.includes('fatigue')) {
+                daysOffset += 2; // Add 2 days if cramps or fatigue are present
+            }
+
+            // Calculate the next period date
+            const nextPeriodDate = new Date(lastPeriodDate);
+            nextPeriodDate.setDate(nextPeriodDate.getDate() + cycleLength + daysOffset);
+
+            // Display the result
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = "Your next period is expected on: " + nextPeriodDate.toDateString();
+            resultElement.classList.remove("hidden");
+        }
+    </script>
+
+</body>
+</html>

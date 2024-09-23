@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding PMS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9fbe7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 900px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #00796b;
+        }
+        .section p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+        .toggle-content {
+            background-color: #e0f2f1;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            color: #004d40;
+            margin-bottom: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .toggle-content:hover {
+            background-color: #b2dfdb;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Understanding PMS</h1>
+
+        <div class="section">
+            <h2>What is PMS?</h2>
+            <p>Premenstrual Syndrome (PMS) refers to a range of physical and emotional symptoms that occur in the lead-up to menstruation. Symptoms typically start a few days before your period and end within a few days of its onset.</p>
+        </div>
+
+        <div class="section">
+            <h2>Common Symptoms</h2>
+            <div class="toggle-content" onclick="toggleVisibility('symptomsContent')">Click to Show Symptoms</div>
+            <div id="symptomsContent" class="hidden">
+                <p>1. Emotional symptoms: mood swings, irritability, and depression.</p>
+                <p>2. Physical symptoms: bloating, breast tenderness, and headaches.</p>
+                <p>3. Behavioral symptoms: changes in sleep patterns and appetite.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Possible Causes</h2>
+            <p>The exact cause of PMS is not known, but it may be related to hormonal changes during the menstrual cycle. Factors like stress, genetics, and lifestyle also play a role.</p>
+        </div>
+
+        <div class="section">
+            <h2>Management and Remedies</h2>
+            <div class="toggle-content" onclick="toggleVisibility('remediesContent')">Click to Show Remedies</div>
+            <div id="remediesContent" class="hidden">
+                <p>1. **Diet**: Eating a balanced diet with plenty of fruits, vegetables, and whole grains can help manage symptoms.</p>
+                <p>2. **Exercise**: Regular physical activity can reduce the severity of PMS symptoms.</p>
+                <p>3. **Stress Management**: Techniques such as yoga, meditation, and deep breathing exercises can be beneficial.</p>
+                <p>4. **Medication**: Over-the-counter pain relievers and hormonal treatments can alleviate symptoms for some women.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleVisibility(id) {
+            const element = document.getElementById(id);
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+            } else {
+                element.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>

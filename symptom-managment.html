@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Tracker - CycleSense</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #fef6f6;
+        }
+
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd1dc;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 5%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff69b4;
+            margin-bottom: 1.5rem;
+        }
+
+        .symptom-tracker {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .symptom-question {
+            margin-bottom: 1rem;
+        }
+
+        .symptom-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .symptom-item {
+            background-color: #ffb6c1;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(33% - 10px);
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .symptom-item input {
+            margin-right: 10px;
+        }
+
+        #submitSymptoms {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        #submitSymptoms:hover {
+            background-color: #ff1493;
+        }
+
+        #symptomResult {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffd1dc;
+            border-radius: 8px;
+            display: none;
+        }
+
+        footer {
+            background-color: #ff69b4;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CycleSense</div>
+        <nav>
+            <ul>
+                <li><a href="home.html#cycle-tracker">Cycle Tracker</a></li>
+                <li><a href="home.html#symptom-logger">Symptom Logger</a></li>
+                <li><a href="home.html#product-recommendations">Products</a></li>
+                <li><a href="home.html#resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Personalized Symptom Tracker</h1>
+        <div class="symptom-tracker">
+            <p>Select the symptoms you're currently experiencing:</p>
+            <div class="symptom-container">
+                <label class="symptom-item"><input type="checkbox" value="cramps"> Cramps</label>
+                <label class="symptom-item"><input type="checkbox" value="fatigue"> Fatigue</label>
+                <label class="symptom-item"><input type="checkbox" value="bloating"> Bloating</label>
+                <label class="symptom-item"><input type="checkbox" value="headaches"> Headaches</label>
+                <label class="symptom-item"><input type="checkbox" value="moodSwings"> Mood Swings</label>
+                <label class="symptom-item"><input type="checkbox" value="acne"> Acne</label>
+                <label class="symptom-item"><input type="checkbox" value="breastTenderness"> Breast Tenderness</label>
+                <label class="symptom-item"><input type="checkbox" value="hairLoss"> Hair Loss</label>
+                <label class="symptom-item"><input type="checkbox" value="sleepDisruption"> Sleep Disruption</label>
+                <label class="symptom-item"><input type="checkbox" value="heavyBleeding"> Heavy Bleeding</label>
+                <label class="symptom-item"><input type="checkbox" value="nausea"> Nausea</label>
+                <label class="symptom-item"><input type="checkbox" value="constipation"> Constipation</label>
+                <label class="symptom-item"><input type="checkbox" value="diarrhea"> Diarrhea</label>
+                <label class="symptom-item"><input type="checkbox" value="anxiety"> Anxiety</label>
+                <label class="symptom-item"><input type="checkbox" value="depression"> Depression</label>
+                <label class="symptom-item"><input type="checkbox" value="pelvicPain"> Pelvic Pain</label>
+                <label class="symptom-item"><input type="checkbox" value="weightGain"> Weight Gain</label>
+                <label class="symptom-item"><input type="checkbox" value="irregularPeriods"> Irregular Periods</label>
+                <label class="symptom-item"><input type="checkbox" value="dizziness"> Dizziness</label>
+                <label class="symptom-item"><input type="checkbox" value="foodCravings"> Food Cravings</label>
+                <label class="symptom-item"><input type="checkbox" value="backPain"> Back Pain</label>
+                <label class="symptom-item"><input type="checkbox" value="jointPain"> Joint Pain</label>
+                <label class="symptom-item"><input type="checkbox" value="frequentUrination"> Frequent Urination</label>
+                <label class="symptom-item"><input type="checkbox" value="drySkin"> Dry Skin</label>
+                <label class="symptom-item"><input type="checkbox" value="hairGrowth"> Excessive Hair Growth</label>
+            </div>
+
+            <button id="submitSymptoms">Submit</button>
+
+            <div id="symptomResult">
+                <h3>Symptom Analysis</h3>
+                <p id="analysisText"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CycleSense. All rights reserved. | <a href="#" style="color: white;">Contact Us</a></p>
+    </footer>
+
+    <script>
+        const symptomSolutions = {
+            cramps: "Try using a heating pad and herbal teas like chamomile.",
+            fatigue: "Ensure you're getting enough rest and consider iron supplements.",
+            bloating: "Reduce salt intake and drink peppermint tea.",
+            headaches: "Stay hydrated and apply a warm compress.",
+            moodSwings: "Exercise regularly and maintain a balanced diet.",
+            acne: "Use gentle skincare products and avoid oily foods.",
+            breastTenderness: "Wear a supportive bra and reduce caffeine intake.",
+            hairLoss: "Use hair-strengthening products and check your iron levels.",
+            sleepDisruption: "Create a consistent bedtime routine and avoid caffeine before sleep.",
+            heavyBleeding: "Consult a doctor if it persists and consider iron supplements.",
+            nausea: "Eat smaller meals and avoid strong odors.",
+            constipation: "Increase fiber intake and drink plenty of water.",
+            diarrhea: "Stay hydrated and eat a bland diet.",
+            anxiety: "Practice meditation and deep breathing exercises.",
+            depression: "Seek support from friends or a therapist.",
+            pelvicPain: "Apply heat and avoid heavy lifting.",
+            weightGain: "Consider a balanced diet and regular exercise.",
+            irregularPeriods: "Track your cycle closely and consult a gynecologist.",
+            dizziness: "Stay hydrated and sit down if you feel lightheaded.",
+            foodCravings: "Moderate your cravings with healthy snacks.",
+            backPain: "Stretch regularly and apply ice or heat.",
+            jointPain: "Try low-impact exercises and use anti-inflammatory remedies.",
+            frequentUrination: "Consult a doctor if it's excessive or painful.",
+            drySkin: "Use moisturizer and avoid hot showers.",
+            hairGrowth: "Consult a doctor for any excessive hair growth."
+        };
+
+        document.getElementById("submitSymptoms").addEventListener("click", function() {
+            const selectedSymptoms = Array.from(document.querySelectorAll(".symptom-item input:checked")).map(input => input.value);
+            const analysisText = selectedSymptoms.map(symptom => `${symptom.charAt(0).toUpperCase() + symptom.slice(1)}: ${symptomSolutions[symptom]}`).join('<br><br>');
+
+            document.getElementById("analysisText").innerHTML = analysisText;
+            document.getElementById("symptomResult").style.display = "block";
+        });
+    </script>
+</body>
+</html>

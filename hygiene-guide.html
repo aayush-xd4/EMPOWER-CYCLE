@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menstrual Hygiene</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 900px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #00796b;
+        }
+        .section p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+        .toggle-content {
+            background-color: #e0f2f1;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            color: #004d40;
+            margin-bottom: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .toggle-content:hover {
+            background-color: #b2dfdb;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Menstrual Hygiene</h1>
+
+        <div class="section">
+            <h2>What is Menstrual Hygiene?</h2>
+            <p>Menstrual hygiene refers to practices and products used to manage menstruation effectively and maintain personal cleanliness during this period. Proper hygiene helps prevent infections and discomfort.</p>
+        </div>
+
+        <div class="section">
+            <h2>Menstrual Products</h2>
+            <div class="toggle-content" onclick="toggleVisibility('productsContent')">Click to Show Menstrual Products</div>
+            <div id="productsContent" class="hidden">
+                <p>1. **Pads**: Absorbent materials worn in underwear to collect menstrual blood.</p>
+                <p>2. **Tampons**: Absorbent products inserted into the vagina to absorb menstrual blood.</p>
+                <p>3. **Menstrual Cups**: Flexible cups inserted into the vagina to collect menstrual blood.</p>
+                <p>4. **Period Underwear**: Specialized underwear designed to absorb menstrual blood.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Hygiene Tips</h2>
+            <div class="toggle-content" onclick="toggleVisibility('hygieneTipsContent')">Click to Show Hygiene Tips</div>
+            <div id="hygieneTipsContent" class="hidden">
+                <p>1. **Change Products Regularly**: Change pads, tampons, or menstrual cups every 4-6 hours to maintain hygiene and prevent leaks.</p>
+                <p>2. **Wash Hands Frequently**: Wash your hands before and after changing menstrual products to reduce the risk of infections.</p>
+                <p>3. **Clean Genital Area**: Wash the genital area with mild soap and water daily. Avoid douching as it can disrupt the natural balance.</p>
+                <p>4. **Wear Breathable Fabrics**: Opt for cotton underwear and avoid tight-fitting clothing to reduce irritation.</p>
+                <p>5. **Store Products Properly**: Keep menstrual products in a clean, dry place to prevent contamination.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>When to See a Doctor</h2>
+            <p>If you experience severe discomfort, unusual symptoms, or persistent infections, consult a healthcare professional for advice and treatment.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleVisibility(id) {
+            const element = document.getElementById(id);
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+            } else {
+                element.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>
